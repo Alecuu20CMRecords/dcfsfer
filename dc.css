@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+:root {
+    --space-xs: clamp(6px, 1vw, 12px);
+    --space-sm: clamp(10px, 1.5vw, 18px);
+    --space-md: clamp(15px, 2.5vw, 30px);
+    --space-lg: clamp(25px, 4vw, 60px);
+
+    --radius-sm: clamp(8px, 1vw, 14px);
+    --radius-md: clamp(12px, 2vw, 22px);
+
+    --text-xs: clamp(9px, 1.8vw, 12px);
+    --text-sm: clamp(11px, 2vw, 14px);
+    --text-md: clamp(14px, 2.4vw, 18px);
+    --text-lg: clamp(18px, 3vw, 24px);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -621,4 +636,123 @@ input, textarea, select {
         font-size: 10px;
         padding: 5px 10px;
     }
+}
+
+body {
+    font-size: var(--text-md);
+}
+
+.logo {
+    font-size: clamp(18px, 3vw, 28px);
+}
+
+.main-container {
+    padding: 0 clamp(15px, 4vw, 80px);
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+}
+
+.slides-left {
+    width: clamp(280px, 38vw, 460px);
+    gap: clamp(40px, 8vw, 140px);
+}
+
+.slide-row {
+    gap: var(--space-sm);
+}
+
+.slide-container {
+    width: clamp(150px, 18vw, 230px);
+    height: auto;
+    aspect-ratio: 16 / 14;
+    border-radius: var(--radius-sm);
+}
+
+.slide-text {
+    font-size: var(--text-sm);
+}
+
+.character-container {
+    width: 100%;
+}
+
+.static-tests {
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+}
+
+.static-test {
+    width: clamp(160px, 22vw, 200px);
+    padding: var(--space-sm);
+}
+
+.static-test h3 {
+    font-size: var(--text-xs);
+}
+
+.static-test p {
+    font-size: var(--text-xs);
+}
+
+.form-container {
+    width: clamp(280px, 38vw, 420px);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+}
+
+form h1 {
+    font-size: var(--text-lg);
+}
+
+label {
+    font-size: var(--text-sm);
+}
+
+input, select {
+    font-size: var(--text-sm);
+}
+
+button {
+    font-size: var(--text-md);
+    padding: clamp(10px, 2.5vw, 15px);
+}
+
+.enderdragon img {
+    width: clamp(260px, 40vw, 520px);
+    height: auto;
+}
+
+.info-text {
+    padding: clamp(20px, 4vw, 60px);
+    font-size: var(--text-sm);
+    border-radius: clamp(25px, 5vw, 50px);
+}
+
+.popup-message {
+    max-width: min(90vw, 340px);
+    font-size: var(--text-xs);
+}
+
+.right-click-popup {
+    font-size: var(--text-xs);
+    max-width: min(90vw, 300px);
+}
+
+.footer {
+    padding: clamp(15px, 3vw, 30px);
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.footer .socials a img {
+    width: clamp(30px, 5vw, 42px);
+    height: auto;
+}
+
+.footer .copyright {
+    position: static;
+    transform: none;
+    width: 100%;
+    justify-content: center;
+    font-size: var(--text-xs);
 }
