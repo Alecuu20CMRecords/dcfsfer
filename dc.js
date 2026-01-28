@@ -50,27 +50,26 @@ form.addEventListener('submit', function(e){
         });
 });
 
-document.addEventListener("contextmenu", e => e.preventDefault());
-
-document.addEventListener("keydown", e => {
-    if (
-        e.key === "F12" ||
-        (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
-        (e.ctrlKey && e.key === "U")
-    ) {
-        e.preventDefault();
-        showSecurityPopup();
-    }
-});
+let rightClickCooldown = false;
 
 document.addEventListener("contextmenu", e => {
-    e.preventDefault();
+    e.preventDefault(); // blochează meniul click dreapta
+
+    if (rightClickCooldown) return; // cooldown activ
+    rightClickCooldown = true;
+
     const popup = document.getElementById("rightClickPopup");
     if (!popup) return;
 
-    popup.classList.add("show");
+    popup.classList.add("show"); // arată popup
 
+    // ascunde automat după 3 secunde
     setTimeout(() => {
         popup.classList.remove("show");
-    }, 10000);
+    }, 3000);
+
+    // activează cooldown de 5 secunde
+    setTimeout(() => {
+        rightClickCooldown = false;
+    }, 5000);
 });
