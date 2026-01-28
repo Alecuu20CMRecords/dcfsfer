@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     document.addEventListener("contextmenu", (e) => {
         e.preventDefault();
-        alert("Click dreapta dezactivat pe această pagină!");
     });
 
     document.addEventListener("keydown", (e) => {
