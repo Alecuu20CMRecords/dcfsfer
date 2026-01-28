@@ -566,13 +566,14 @@ input, textarea, select {
     to { width: 0%; }
 }
 
+/* Popup click dreapta - dreapta jos */
 .right-click-popup {
     position: fixed;
     bottom: 20px;
     right: 20px;
     max-width: 280px;
     padding: 15px 20px;
-    background-color: #b00000; /* roșu închis */
+    background-color: #b00000; /* roșu */
     color: #fff; /* text alb */
     font-family: 'Press Start 2P', cursive;
     font-size: 10px;
@@ -581,7 +582,7 @@ input, textarea, select {
     opacity: 0;
     transform: translateX(60px);
     transition: all 0.5s ease;
-    pointer-events: none; /* ca să nu blocheze clickurile normale */
+    pointer-events: none;
 }
 
 .right-click-popup.show {
