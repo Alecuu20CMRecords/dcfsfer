@@ -50,34 +50,60 @@ form.addEventListener('submit', function(e){
         });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+/***********************
+ * BASIC FRONTEND SECURITY
+ ***********************/
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", e => {
+    if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
+        (e.ctrlKey && e.key === "U")
+    ) {
+        e.preventDefault();
+        showSecurityPopup();
+    }
+});
+
+/***********************
+ * SECURITY POPUP
+ ***********************/
+let popupShown = false;
+
+function showSecurityPopup() {
+    if (popupShown) return;
+    popupShown = true;
+
     const popup = document.getElementById("popupMessage");
-    const closeBtn = document.getElementById("popupClose");
     const progress = document.getElementById("popupProgress");
 
+    if (!popup || !progress) return;
+
+    // reset
+    popup.style.display = "block";
+    popup.classList.remove("show");
+    progress.style.animation = "none";
+    progress.offsetHeight; // force reflow
+
+    // show
+    popup.classList.add("show");
+
+    // progress 3 sec
+    progress.style.animation = "progressBar 3s linear forwards";
+
+    // auto close
     setTimeout(() => {
-        popup.classList.add("show");
-
-        progress.style.width = "0%";
-
+        popup.classList.remove("show");
         setTimeout(() => {
-            popup.classList.remove("show");
-            popup.classList.add("hide");
-        }, 10000);
-
-    }, 2000); 
-
-document.addEventListener('DOMContentLoaded', () => {
-    const popup = document.getElementById('popupMessage');
-
-    // Afișează după 0 secunde (instant)
-    popup.classList.add('show');
-
-    // Ascunde după 3 secunde
-    setTimeout(() => {
-        popup.classList.remove('show');
+            popup.style.display = "none";
+        }, 500);
     }, 3000);
+}
 
-    // Blochează click dreapta pe popup
-    popup.addEventListener('contextmenu', e => e.preventDefault());
+/***********************
+ * SHOW POPUP ON PAGE LOAD
+ ***********************/
+document.addEventListener("DOMContentLoaded", () => {
+    showSecurityPopup();
 });
