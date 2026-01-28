@@ -71,4 +71,22 @@ document.addEventListener("DOMContentLoaded", () => {
         popup.classList.remove("show");
         popup.classList.add("hide");
     });
+
+});
+document.addEventListener("DOMContentLoaded", () => {
+    // Dezactivează click-dreapta
+    document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+        alert("Click dreapta dezactivat pe această pagină!");
+    });
+
+    // Dezactivează combinații de taste pentru DevTools
+    document.addEventListener("keydown", (e) => {
+        // F12
+        if (e.key === "F12") e.preventDefault();
+        // Ctrl + Shift + I / J / C
+        if (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key)) e.preventDefault();
+        // Ctrl + U (view source)
+        if (e.ctrlKey && e.key === "u") e.preventDefault();
+    });
 });
