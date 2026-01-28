@@ -96,3 +96,16 @@ document.addEventListener("contextmenu", e => {
         rightClickCooldown = false;
     }, 5000);
 });
+
+document.addEventListener('keydown', (e) => {
+    if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+        (e.ctrlKey && e.key === 'U')
+    ) {
+        e.preventDefault();
+        alert('Accesul la instrumente de dezvoltator este blocat pe Site');
+    }
+});
+
+document.addEventListener('selectstart', (e) => e.preventDefault());
