@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<link rel="icon" href="Images/logo_f3.ico" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dc-ro.ro | Creaza un Smp gratis</title>
+<link rel="stylesheet" href="dc.css">
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+   (function(){
+      emailjs.init("YOUR_USER_ID"); // îl primești din dashboard EmailJS
+   })();
+</script>
+</head>
+<body>
+
+<div class="background-logo">
+    <div class="logo">
+        <span>dc-ro</span>
+    </div>
+</div>
+
+<div class="background-main">
+    <div class="main-container">
+
+        <div class="slides-left">
+
+            <div class="slide-row">
+                <div class="slide-container">
+                    <div class="slide-text">Servere hostate pe VPS</div>
+                    <div class="character-container">
+                        <img src="Images/test.png" class="character-img">
+                    </div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide-text">Protectie Anti ddos</div>
+                    <div class="character-container">
+                        <img src="Images/test2.png" class="character-img">
+                    </div>
+                </div>
+            </div>
+            <div class="slide-row">
+                <div class="slide-container">
+                    <div class="slide-text">Iti cream server de Discord </div>
+                    <div class="character-container">
+                        <img src="Images/test3.png" class="character-img">
+                    </div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide-text">Config Unic de la 0 fara costuri</div>
+                    <div class="character-container">
+                        <img src="Images/test4.png" class="character-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="static-tests">
+                <div class="static-test">
+                    <h3>Vrei sa ajuti proiectul?</h3>
+                    <p>Doneaza 1$ pe PayPal: Pay@dc-ro.ro - Pentru a cumpara mai multe Node-uri </p>
+                </div>
+                <div class="static-test">
+                    <h3>Stai la curent</h3>
+                    <p>Intra pe discord nostru pentru a fi la curent cu updates si uptime - dsc.gg/deadcraft</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="enderdragon">
+                <img src="Images/animation.png" alt="Ender Dragon">
+            </div>
+
+            <form id="mcForm" action="send_form.php" method="POST">
+                <h1>Spune ce fel de Server vrei</h1>
+
+                <label for="email">Mail Tau:</label>
+                <input type="email" id="email" name="email" required placeholder="ex: exemplu@gmail.com" class="pixel-input">
+
+                <label for="node">Alege Node:</label>
+                <select id="node" name="node" required class="pixel-input">
+                    <option value="">Selectează</option>
+                    <option value="dono-02">02 - Stabil</option>
+                    <option value="dono-04">04 - 24/7</option>
+                </select>
+
+                <label for="serverName">Nume Server:</label>
+                <input type="text" id="serverName" name="serverName" required class="pixel-input">
+
+                <label for="colors">Spune 1-3 culori pentru Server:</label>
+                <input type="text" id="colors" name="colors" required class="pixel-input">
+
+                <label for="logo">Ai Logo/banner?</label>
+                <select id="logo" name="logo" required class="pixel-input">
+                    <option value="">Selectează</option>
+                    <option value="da">Da</option>
+                    <option value="nu">Nu</option>
+                </select>
+
+                <label for="discord">Numele tau de pe Discord:</label>
+                <input type="text" id="discord" name="discord" required class="pixel-input">
+
+                <label for="mcName">Numele tau de pe Minecraft:</label>
+                <input type="text" id="mcName" name="mcName" required class="pixel-input">
+
+                <button type="submit" onclick="sendMail()">➤ TRIMITE CERERE </button>
+                <h1>Doar 10 servere valabile - 3/10 Utilizate </h1>
+            </form>
+
+            <div class="success-msg" id="successMsg">Înregistrare trimisă cu succes!</div>
+        </div>
+
+    </div>
+
+    <div class="info-text">
+        <div class="info-content">
+            <p>1. Toti Useri vor folosi subdomain-ul nostru nume.dc-ro.ro</p>
+            <p>2. Nu toate Node-urile noastre sunt 24/7 uptime,unele necesita restart la 24+ de ore</p>
+            <p>3. Toate datele server-ului sunt salvate intr-un backup intern pe PC-urile noastre</p>
+            <p>4. Daca nu ai logo si sau banner,noi iti putem face de la 0 Originale fara cost-uri</p>
+            <p>5. Daca ai deja o comunitate putem sa o transferam pe noul server de Discord</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer" id="footer">
+    <div class="socials">
+        <a href="https://tiktok.com/@al3kuanin1m/"><img src="Images/tiktok.png" alt="TikTok"></a>
+        <a href="#"><img src="Images/youtube.png" alt="YouTube"></a>
+        <a href="https://dsc.gg/deadcraft"><img src="Images/discord.png" alt="Discord"></a>
+    </div>
+    <div class="copyright">
+        <img src="Images/logo_f3.ico" alt="Logo Site" class="footer-logo">
+        &copy; dc-ro.ro Romania @2025-2026 - All rights reserved.
+    </div>
+</div>
+
+<div class="popup-message" id="popupMessage">
+    <div class="popup-progress" id="popupProgress"></div>
+    <span class="popup-close" id="popupClose">✖</span>
+    <p>
+        ⚠️ atenție!<br> <br>
+        Site-ul este in BETA,  functii ca phone view nu sunt Recomandate<br> <br>
+        Daca gasiti bug-uri si sau erori raportatile pe Discord nostru
+    </p>
+</div>
+
+<script src="dc.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "O6vEGYohXD5pDr_ph",
+      });
+   })();
+</script>
+
+</body>
+</html>
