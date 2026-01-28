@@ -76,22 +76,20 @@ document.addEventListener("DOMContentLoaded", () => {
 let rightClickCooldown = false;
 
 document.addEventListener("contextmenu", e => {
-    e.preventDefault(); // blochează meniul click dreapta
+    e.preventDefault();
 
-    if (rightClickCooldown) return; // cooldown activ
+    if (rightClickCooldown) return; 
     rightClickCooldown = true;
 
     const popup = document.getElementById("rightClickPopup");
     if (!popup) return;
 
-    popup.classList.add("show"); // arată popup
+    popup.classList.add("show");
 
-    // ascunde automat după 3 secunde
     setTimeout(() => {
         popup.classList.remove("show");
     }, 3000);
 
-    // activează cooldown de 5 secunde
     setTimeout(() => {
         rightClickCooldown = false;
     }, 5000);
