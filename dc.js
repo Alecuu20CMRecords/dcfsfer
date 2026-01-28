@@ -67,24 +67,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }, 2000); 
 
-    closeBtn.addEventListener("click", () => {
-        popup.classList.remove("show");
-        popup.classList.add("hide");
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('popupMessage');
 
-});
-document.addEventListener("DOMContentLoaded", () => {
-    
-    document.addEventListener("contextmenu", (e) => {
-        e.preventDefault();
-    });
+    // Afișează după 0 secunde (instant)
+    popup.classList.add('show');
 
-    document.addEventListener("keydown", (e) => {
-        // F12
-        if (e.key === "F12") e.preventDefault();
+    // Ascunde după 3 secunde
+    setTimeout(() => {
+        popup.classList.remove('show');
+    }, 3000);
 
-        if (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key)) e.preventDefault();
-
-        if (e.ctrlKey && e.key === "u") e.preventDefault();
-    });
+    // Blochează click dreapta pe popup
+    popup.addEventListener('contextmenu', e => e.preventDefault());
 });
