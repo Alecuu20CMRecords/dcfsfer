@@ -50,6 +50,29 @@ form.addEventListener('submit', function(e){
         });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("popupMessage");
+    const closeBtn = document.getElementById("popupClose");
+    const progress = document.getElementById("popupProgress");
+
+    setTimeout(() => {
+        popup.classList.add("show");
+
+        progress.style.width = "0%";
+
+        setTimeout(() => {
+            popup.classList.remove("show");
+            popup.classList.add("hide");
+        }, 10000);
+
+    }, 2000); 
+
+    closeBtn.addEventListener("click", () => {
+        popup.classList.remove("show");
+        popup.classList.add("hide");
+    });
+});
+
 let rightClickCooldown = false;
 
 document.addEventListener("contextmenu", e => {
