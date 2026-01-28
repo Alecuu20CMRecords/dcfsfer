@@ -50,9 +50,6 @@ form.addEventListener('submit', function(e){
         });
 });
 
-/***********************
- * BASIC FRONTEND SECURITY
- ***********************/
 document.addEventListener("contextmenu", e => e.preventDefault());
 
 document.addEventListener("keydown", e => {
@@ -66,44 +63,14 @@ document.addEventListener("keydown", e => {
     }
 });
 
-/***********************
- * SECURITY POPUP
- ***********************/
-let popupShown = false;
+document.addEventListener("contextmenu", e => {
+    e.preventDefault();
+    const popup = document.getElementById("rightClickPopup");
+    if (!popup) return;
 
-function showSecurityPopup() {
-    if (popupShown) return;
-    popupShown = true;
-
-    const popup = document.getElementById("popupMessage");
-    const progress = document.getElementById("popupProgress");
-
-    if (!popup || !progress) return;
-
-    // reset
-    popup.style.display = "block";
-    popup.classList.remove("show");
-    progress.style.animation = "none";
-    progress.offsetHeight; // force reflow
-
-    // show
     popup.classList.add("show");
 
-    // progress 3 sec
-    progress.style.animation = "progressBar 3s linear forwards";
-
-    // auto close
     setTimeout(() => {
         popup.classList.remove("show");
-        setTimeout(() => {
-            popup.style.display = "none";
-        }, 500);
-    }, 3000);
-}
-
-/***********************
- * SHOW POPUP ON PAGE LOAD
- ***********************/
-document.addEventListener("DOMContentLoaded", () => {
-    showSecurityPopup();
+    }, 10000);
 });
